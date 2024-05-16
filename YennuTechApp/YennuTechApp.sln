@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YennuTechApp", "YennuTechApp\YennuTechApp.csproj", "{7394A8A3-EB9B-4B13-8216-5503D7F36961}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{E0F400DB-B4ED-4A34-AB5F-59FF6BB1BD4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7394A8A3-EB9B-4B13-8216-5503D7F36961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7394A8A3-EB9B-4B13-8216-5503D7F36961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7394A8A3-EB9B-4B13-8216-5503D7F36961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7394A8A3-EB9B-4B13-8216-5503D7F36961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F400DB-B4ED-4A34-AB5F-59FF6BB1BD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F400DB-B4ED-4A34-AB5F-59FF6BB1BD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F400DB-B4ED-4A34-AB5F-59FF6BB1BD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F400DB-B4ED-4A34-AB5F-59FF6BB1BD4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {829C127C-2731-4604-BA8F-E78F531AB7CD}
+	EndGlobalSection
+EndGlobal
