@@ -21,29 +21,29 @@ namespace Repository.Entity.DBContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<LocationEntity>().HasData(new List<LocationEntity>()
-            { 
-                new() {
-                    Code = "LON",
-                    CreatedDate = DateTime.Now,
-                    Name = "London"
-                },
-                  new() {
-                    Code = "MAN",
-                    CreatedDate = DateTime.Now,
-                    Name = "Manchester"
-                },
-                  new() {
-                    Code = "Con",
-                    CreatedDate = DateTime.Now,
-                    Name = "Conwall"
-                },
-                  new() {
-                    Code = "EDIN",
-                    CreatedDate = DateTime.Now,
-                    Name = "Edinburgh"
-                }
-            });
+            //modelBuilder.Entity<LocationEntity>().HasData(new List<LocationEntity>()
+            //{ 
+            //    new() {
+            //        Code = "LON",
+            //        CreatedDate = DateTime.Now,
+            //        Name = "London"
+            //    },
+            //      new() {
+            //        Code = "MAN",
+            //        CreatedDate = DateTime.Now,
+            //        Name = "Manchester"
+            //    },
+            //      new() {
+            //        Code = "Con",
+            //        CreatedDate = DateTime.Now,
+            //        Name = "Conwall"
+            //    },
+            //      new() {
+            //        Code = "EDIN",
+            //        CreatedDate = DateTime.Now,
+            //        Name = "Edinburgh"
+            //    }
+            //});
         }
 
     }

@@ -4,8 +4,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Repository.Base;
+using Repository.DataClass.Abstraction;
+using Repository.DataClass;
 using System;
 using System.Linq;
+using Repository.Entity.DBContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace YennuTechApp
 {
@@ -21,12 +26,23 @@ namespace YennuTechApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+        //    services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(
+        //connectionString: ("DefaultConnection")));
+
+            
+            services.AddDbContext<DataBaseContext>(options =>
+       options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddTransient<ILocationRepository, LocationRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "YennuTechApp", Version = "v1" });
             });
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Repository.DataClass.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +18,19 @@ namespace YennuTechApp.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILocationRepository _locationRepository;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ILocationRepository locationRepository)
         {
             _logger = logger;
+            _locationRepository = locationRepository;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<WeatherForecast>> Get()
         {
+            var result = await _locationRepository.GetAllAsync();
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

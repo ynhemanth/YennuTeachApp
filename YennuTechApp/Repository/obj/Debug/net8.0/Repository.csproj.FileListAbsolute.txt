@@ -260,3 +260,4 @@ C:\projects\YennuTechApp\YennuTechApp\Repository\obj\Debug\net8.0\scopedcss\bund
 C:\projects\YennuTechApp\YennuTechApp\Repository\obj\Debug\net8.0\Repository.csproj.Up2Date
 C:\projects\YennuTechApp\YennuTechApp\Repository\obj\Debug\net8.0\Repository.genruntimeconfig.cache
 C:\projects\YennuTechApp\YennuTechApp\Repository\obj\Debug\net8.0\ref\Repository.dll
+C:\projects\YennuTechApp\YennuTechApp\Repository\obj\Debug\net8.0\Repository.sourcelink.json

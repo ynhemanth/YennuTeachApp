@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "B7IDbabV/wgIHsv+jvwqsXRvePhDVwdWzjrfAo3c4yQ=",
+  "Hash": "0+L9xd3gfisaMn9VevE77IETOrfBE/DNBJceBCXZumk=",
   "Source": "YennuTechApp",
   "BasePath": "_content/YennuTechApp",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\projects\\YennuTechApp\\YennuTechApp\\Repository\\Repository.csproj",
+      "Version": 2,
+      "Source": "Repository",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

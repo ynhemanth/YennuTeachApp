@@ -1,11 +1,13 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Repository.Base;
+using Repository.DataClass.Abstraction;
+using Repository.DataClass;
+using Repository.Entity.DBContext;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace YennuTechApp
 {
@@ -13,7 +15,12 @@ namespace YennuTechApp
     {
         public static void Main(string[] args)
         {
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+
             CreateHostBuilder(args).Build().Run();
+            
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -22,5 +29,7 @@ namespace YennuTechApp
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+        
+
     }
 }

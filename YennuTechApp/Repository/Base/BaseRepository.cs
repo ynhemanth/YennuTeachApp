@@ -8,8 +8,8 @@ namespace Repository.Base
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        private readonly DataBaseContext _dbContext;
-        private DbSet<T> _dbSet;
+        public readonly DataBaseContext _dbContext;
+        public DbSet<T> _dbSet;
         public BaseRepository(DataBaseContext dbContext)
         {
             _dbContext = dbContext;
@@ -33,7 +33,17 @@ namespace Repository.Base
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return await _dbSet.ToListAsync();
+            try
+            {
+                var val = await _dbSet.ToListAsync();
+                return val;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+
+            
         }
 
         public async Task<IEnumerable<T>> GetAllByFilterAsync(Expression<Func<T, bool>> filter, bool useNoTracking = false)
