@@ -4,11 +4,11 @@ using Repository.Entity.Model;
 
 namespace Repository.Entity.Config
 {
-    public class GenderConfig : IEntityTypeConfiguration<GenderEntity>
+    public class GenderConfig : IEntityTypeConfiguration<GenresEntity>
     {
-        public void Configure(EntityTypeBuilder<GenderEntity> builder)
+        public void Configure(EntityTypeBuilder<GenresEntity> builder)
         {
-            builder.ToTable("Gender");
+            builder.ToTable("Genre");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();            
             builder.Property(n => n.Name).HasMaxLength(250);

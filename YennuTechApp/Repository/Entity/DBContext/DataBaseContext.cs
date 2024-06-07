@@ -13,9 +13,9 @@ namespace Repository.Entity.DBContext
 
         public DbSet<LocationEntity> Locations { get; set; }
         public DbSet<AgeRestrictionEntity> AgeRestrictions { get; set; }
-        public DbSet<GenderEntity> Genders { get; set; }
+        public DbSet<GenresEntity> Genres { get; set; }
         public DbSet<MovieEntity> Movies { get; set; }
-        public DbSet<MovieGenderEntity> MovieGenders { get; set; }
+        public DbSet<MovieGenresEntity> MovieGenres { get; set; }
         public DbSet<ScreenEntity> Screens { get; set; }
         public DbSet<ShowsEntity> Shows { get; set; }
 

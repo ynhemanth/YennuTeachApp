@@ -48,7 +48,7 @@ namespace Repository.Migrations
                     b.ToTable("AgeRestrictions");
                 });
 
-            modelBuilder.Entity("Repository.Entity.Model.GenderEntity", b =>
+            modelBuilder.Entity("Repository.Entity.Model.GenresEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genders");
+                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("Repository.Entity.Model.LocationEntity", b =>
@@ -134,7 +134,7 @@ namespace Repository.Migrations
                     b.ToTable("Movies");
                 });
 
-            modelBuilder.Entity("Repository.Entity.Model.MovieGenderEntity", b =>
+            modelBuilder.Entity("Repository.Entity.Model.MovieGenresEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -154,7 +154,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MovieIdId");
 
-                    b.ToTable("MovieGenders");
+                    b.ToTable("MovieGenres");
                 });
 
             modelBuilder.Entity("Repository.Entity.Model.ScreenEntity", b =>
@@ -231,9 +231,9 @@ namespace Repository.Migrations
                     b.Navigation("AgeRestrictionId");
                 });
 
-            modelBuilder.Entity("Repository.Entity.Model.MovieGenderEntity", b =>
+            modelBuilder.Entity("Repository.Entity.Model.MovieGenresEntity", b =>
                 {
-                    b.HasOne("Repository.Entity.Model.GenderEntity", "GenderId")
+                    b.HasOne("Repository.Entity.Model.GenresEntity", "GenderId")
                         .WithMany()
                         .HasForeignKey("GenderIdId")
                         .OnDelete(DeleteBehavior.Cascade)

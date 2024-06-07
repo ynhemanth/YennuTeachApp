@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0+L9xd3gfisaMn9VevE77IETOrfBE/DNBJceBCXZumk=",
+  "Hash": "h6/OYMy5RqzBgPG70CCLdSeBM7VHebeHB+KRYZKhELE=",
   "Source": "YennuTechApp",
   "BasePath": "_content/YennuTechApp",
   "Mode": "Default",
@@ -10,6 +10,17 @@
       "Identity": "C:\\projects\\YennuTechApp\\YennuTechApp\\Repository\\Repository.csproj",
       "Version": 2,
       "Source": "Repository",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    },
+    {
+      "Identity": "C:\\projects\\YennuTechApp\\YennuTechApp\\Service\\Service.csproj",
+      "Version": 2,
+      "Source": "Service",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
       "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",

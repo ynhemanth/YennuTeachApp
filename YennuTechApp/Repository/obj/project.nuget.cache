@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ShIwX9v9ZtLaBkQDy4ly42pKIuDKvYbsjSGOnwxSVdsyGdyqLdoOo9UQ8ZUWJShIm2gGkc/xRrEfs0UOool9Fw==",
+  "dgSpecHash": "1vpDcPc/Zq+2n99DrdApwDNUJCyWoqW45eKe7Jd1EtpSmrZAJsSU3Voe9pJsqVZbhoa9Wa5KApNK+ig8cGwAcg==",
   "success": true,
   "projectFilePath": "C:\\projects\\YennuTechApp\\YennuTechApp\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ynhem\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ynhem\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ynhem\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\ynhem\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

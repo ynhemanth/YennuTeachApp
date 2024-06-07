@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0W19WacZI6XHa2POozkOJCHEKFLg088ohTXdVOxdhGf+W+NiEuBoDRKiqyR9+Ory1REY5Ewze7EGMuEWgjkiiA==",
+  "dgSpecHash": "iqTX7BnUctT14oA0nnoGPH1bzE6jJRBMU4Okew+aCbfSClyBOp24aBLwLtPFpW45XFFILgasPhlu+ztzW7kvkQ==",
   "success": true,
   "projectFilePath": "C:\\projects\\YennuTechApp\\YennuTechApp\\YennuTechApp\\YennuTechApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ynhem\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ynhem\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ynhem\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\ynhem\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

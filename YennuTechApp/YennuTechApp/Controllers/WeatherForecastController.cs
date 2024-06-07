@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Repository.DataClass.Abstraction;
+using Service.Abstraction;
+using Service.Location;
+using Service.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,27 +20,29 @@ namespace YennuTechApp.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly ILocationRepository _locationRepository;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, ILocationRepository locationRepository)
+        private readonly ILocationService _locationService;
+        
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ILocationService locationService)
         {
             _logger = logger;
-            _locationRepository = locationRepository;
+            _locationService = locationService;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<WeatherForecast>> Get()
+        public async Task<IEnumerable<LocationCore>> Get()
         {
-            var result = await _locationRepository.GetAllAsync();
+            var result = await _locationService.GetAll();            
+            _logger.Log(LogLevel.Information, "called location items", DateTime.Now);
 
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return result;
+            //var rng = new Random();
+            //return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            //{
+            //    Date = DateTime.Now.AddDays(index),
+            //    TemperatureC = rng.Next(-20, 55),
+            //    Summary = Summaries[rng.Next(Summaries.Length)]
+            //})
+            //.ToArray();
         }
     }
 }

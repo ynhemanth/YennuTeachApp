@@ -1,0 +1,8 @@
+<div>
+    <label for="dataDropdown">Select an item:</label>
+    <select id="dataDropdown" [(ngModel)]="selectedValue">
+      @for (item of data; track item) {
+        <option [value]="item.id">{{item.name}}</option>
+     }
+    </select>
+</div>

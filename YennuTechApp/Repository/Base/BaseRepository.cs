@@ -1,15 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Repository.Entity.DBContext;
-using System;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace Repository.Base
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        public readonly DataBaseContext _dbContext;
-        public DbSet<T> _dbSet;
+        private readonly DataBaseContext _dbContext;
+        private DbSet<T> _dbSet;
+
         public BaseRepository(DataBaseContext dbContext)
         {
             _dbContext = dbContext;
@@ -32,18 +31,10 @@ namespace Repository.Base
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
-        {
-            try
-            {
-                var val = await _dbSet.ToListAsync();
-                return val;
-            }
-            catch(Exception ex)
-            {
-                return null;
-            }
+        {            
+                var result = await _dbSet.ToListAsync();
 
-            
+                return result;
         }
 
         public async Task<IEnumerable<T>> GetAllByFilterAsync(Expression<Func<T, bool>> filter, bool useNoTracking = false)
